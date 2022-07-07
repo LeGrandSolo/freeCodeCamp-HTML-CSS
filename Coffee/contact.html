@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+  </head>
+  <body>
+    <img
+      src="./918f15ac8b1522a2a738b8af4834257e--hot-coffee-coffee-art.jpg"
+      id="logo"
+      width="30%"
+      alt="coffee logo"
+    />
+    <h3>Coffee Junkie</h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="numbers.html">Numbers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <img
+      src="./pexels-igor-haritanovich-1695052.jpg"
+      width="80%"
+      alt="background"
+    />
+    <br />
+    <h1>Contact Us</h1>
+    <br />
+    <form action="submit">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" />
+      <br />
+      <br />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
+      <p>Description</p>
+      <textarea
+        name="description"
+        cols="30"
+        rows="10"
+        placeholder="Your description"
+      ></textarea>
+      <button>Submit</button>
+    </form>
+    <div id="success" style="display: none">
+      <p style="color: green">Successfully submitted form!</p>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="#logo">Back to the top</a>
+    <p>copyright&copy;2022</p>
+  </body>
+  <script>
+    document.querySelector("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      for (const child of e.target.children) {
+        child.value = "";
+      }
+      document.querySelector("#success").style.display = "block";
+    });
+  </script>
+</html>
